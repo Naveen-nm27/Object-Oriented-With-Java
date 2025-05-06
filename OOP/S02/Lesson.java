@@ -19,7 +19,10 @@ public class Lesson {
 		aircraftEndurance = cessna172.fuelCapacity / cessna172.fuelBurnRate;
 		
 		System.out.println("Maximum Time that the cessna172 can stay in air is: " + aircraftEndurance + " hrs");
-    }
+		
+		System.out.println("To cessna172 to fly 3 hrs it needs " + cessna172.fuleNeeded(3.0) + " gallons of fule.");
+	}
+	
 }
 
 class aircraft {
@@ -27,4 +30,11 @@ class aircraft {
     int cruiseSpeed;    // miles per hour
     double fuelCapacity; // gallons
     double fuelBurnRate; // gallons per hour
+	
+	double fuleNeeded(double time){
+		
+		return time * fuelBurnRate;
+	
+	}
 }
+
